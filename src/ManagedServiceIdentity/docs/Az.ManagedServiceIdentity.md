@@ -20,9 +20,6 @@ Gets the systemAssignedIdentity available under the specified RP scope.
 ### [Get-AzUserAssignedIdentity](Get-AzUserAssignedIdentity.md)
 Gets the identity.
 
-### [Get-AzUserAssignedIdentityAssociatedResource](Get-AzUserAssignedIdentityAssociatedResource.md)
-Lists the associated resources for this identity.
-
 ### [New-AzFederatedIdentityCredentials](New-AzFederatedIdentityCredentials.md)
 Create or update a federated identity credential under the specified user assigned identity.
 

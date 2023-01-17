@@ -34,13 +34,13 @@ branch: main
 require:
   - $(this-folder)/../readme.azure.noprofile.md
 input-file:
-  - $(repo)/specification/msi/resource-manager/Microsoft.ManagedIdentity/preview/2022-01-31-preview/ManagedIdentity.json
+  - /src/msi/resource-manager/Microsoft.ManagedIdentity/stable/2023-01-31/ManagedIdentity.json
 
 subject-prefix: ""
 resourcegroup-append: true
 nested-object-to-string: true
 identity-correction-for-post: true
-module-version: 0.2.0
+module-version: 0.3.0
 
 directive:
   - where:
@@ -123,7 +123,7 @@ directive:
     required: true
 
   - where:
-      model-name: FederatedIdentityCredential
+      model-name: FederatedIdentityCredentials
     set:
       format-table:
         properties:
@@ -131,9 +131,4 @@ directive:
           - Issuer
           - Subject
           - Audience
-
-  - where:
-      subject: FederatedIdentityCredentials
-    set:
-      preview-message: This is a preview version of the Federated Identity Credentials feature.
 ```
